@@ -2,21 +2,74 @@
    Use them in FilterBar.jsx: className={styles.filterBar}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
-/* the whole bar */
+
+/* The whole bar */
 .filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  padding: 16px 24px;
+  box-sizing: border-box;
+
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* the <label> with the checkbox */
-.toggle {
+/* Checkbox section */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-/* the wrapper of the List / Grid buttons */
+.checkboxContainer input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.checkboxContainer label {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #172033;
+}
+
+/* List / Grid buttons wrapper */
 .layoutSwitch {
+  display: flex;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* REQUIRED BY THE TESTS: the button of the current layout */
-.active {
+/* Both buttons */
+.layoutSwitchButton {
+  padding: 12px 20px;
+  border: none;
+  background-color: white;
+  color: #172033;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
+
+.layoutSwitchButton:hover:not(.active) {
+  background-color: #f3f4f6;
+}
+
+/* REQUIRED BY THE TESTS */
+.active {
+  background-color: #111827;
+  color: white;
+}
+
 
 /* bonus: the search input */
 .search {

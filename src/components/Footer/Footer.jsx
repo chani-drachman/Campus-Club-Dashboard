@@ -4,5 +4,9 @@ import styles from './Footer.module.css'
 
 export default function Footer() {
   // TODO
-  return null
+  return (
+    <footer className={styles.footer}>
+      <p>© 2025 Campus Coding Club</p>
+    </footer>
+  )
 }

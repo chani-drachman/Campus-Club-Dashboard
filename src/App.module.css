@@ -8,4 +8,5 @@
 
 /* the area with the members and the tasks panel */
 .content {
+   display: flex;
 }

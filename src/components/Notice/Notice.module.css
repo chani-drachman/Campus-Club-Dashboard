@@ -4,12 +4,21 @@
 
 /* REQUIRED BY THE TESTS: the box */
 .notice {
+     width: 100%;
+  padding: 16px 24px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
 }
 
 /* REQUIRED BY THE TESTS: yellow background */
-.warning {
+.warning {  
+   background-color: rgb(248, 235, 192);
+  border: 1px solid #cd9d00;
 }
 
 /* REQUIRED BY THE TESTS: blue background */
 .info {
+    background-color: rgb(210, 230, 248);
+  border: 1px solid #2874bd;
 }

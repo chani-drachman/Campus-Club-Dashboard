@@ -4,4 +4,11 @@
 
 /* the <footer> - small, centered, gray text */
 .footer {
+        text-align: center;
+        width: 100%;
+
+}
+.footer p{
+     color: rgb(113, 113, 113);
+
 }

@@ -4,8 +4,13 @@
 
 /* the <header> wrapper */
 .header {
+  
 }
 
 /* the <h1> - big, centered, bold */
 .title {
+   color: black;
+   font-size: 50px;
+   font-weight: bold;
+   text-align: center;
 }

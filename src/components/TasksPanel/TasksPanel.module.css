@@ -2,34 +2,82 @@
    Use them in TasksPanel.jsx: className={styles.tasksPanel}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
+
 /* the whole panel */
 .tasksPanel {
+  width: 33%;
+  padding: 22px;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  align-self: flex-start;
+     margin-top: 15px;
+margin-left: 15px;
 }
 
 /* the title with the member name */
 .title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #172033;
 }
 
 /* the list of tasks */
 .tasks {
+  display: flex;
+  flex-direction: column;
 }
 
 /* one task */
 .task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 18px;
+  color: #263445;
+  cursor: pointer;
 }
 
-/* a done task (e.g. line-through) */
+.task:last-child {
+  border-bottom: none;
+}
+
+.task input {
+  width: 16px;
+  height: 16px;
+  accent-color: #1473e6;
+  cursor: pointer;
+}
+
+/* a done task */
 .done {
+  color: #9ca3af;
+  text-decoration: line-through;
 }
 
 /* the messages "Select a member..." / "No tasks yet" */
 .empty {
+  color: #8a929e;
+  font-size: 16px;
+  margin: 12px 0 0;
 }
 
 /* bonus: the done/total counter */
 .counter {
+  color: #8a929e;
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
 /* bonus: the quick add form */
 .quickAdd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
 }
+

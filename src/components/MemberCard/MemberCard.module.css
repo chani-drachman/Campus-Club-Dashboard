@@ -4,40 +4,125 @@
 
 /* the card - border, padding, shadow */
 .card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 /* REQUIRED BY THE TESTS: the card of the selected member */
 .selected {
+     border: 2px solid #2563eb;
+
 }
 
 /* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
 .inactive {
+   opacity: 0.5;
 }
 
 /* a circle with the initials, same size for all */
 .avatar {
+    width: 64px;
+  height: 64px;
+  min-width: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/* the member name */
+.memberInfo {
+  flex: 1;
+  min-width: 0;
+}
+
 .name {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #172033;
 }
 
-/* the role badge */
 .badge {
+  display: inline-block;
+  padding: 5px 12px;
+
+  background-color: #f3f4f6;
+  border-radius: 20px;
+
+  font-size: 14px;
+  color: #374151;
 }
 
 /* the small action button (disabled -> faded, no hover effect) */
 .roleButton {
+     padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: filter 0.2s;
+}
+.roleButton:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.roleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Leader - blue */
 .leader {
+     background-color: #2563eb;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Member - green */
 .member {
+     background-color: #059669;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Guest - purple */
 .guest {
+     background-color: #9333ea;
+}
+.list {
+  flex-direction: row;
+  width: 100%;
+}
+
+.grid {
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+.grid .memberInfo {
+  flex: none;
+}
+
+.grid .roleButton {
+  width: 100%;
 }
